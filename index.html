@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>にじ遊戯王祭2025まとめ</title>
+  <title>にじ遊戯王祭2025(11/21まとめ)</title>
   <link href="https://fonts.googleapis.com/css2?family=Zen+Kaku+Gothic+New:wght@400;700&display=swap" rel="stylesheet">
   <style>
     :root{
@@ -12,11 +12,14 @@
       --gold:#caa235;
       --green:#1c7a3b;
       --white:#fff;
+      --purple:#b062ff;
     }
     *{box-sizing:border-box}
-    @font-face {
-      font-family: "MyFont";
-      src: url("fonts/07鉄瓶ゴシック.otf") format("opentype");
+    @font-face
+    {
+    font-family: "鉄瓶ゴシック";
+    src: url('https://cdn.leafscape.be/tetsubin/tetsubin_web.woff2')
+         format("woff2");
     }
     body{margin:0;color:var(--white);background:#0b0e13; font-family: "MyFont", sans-serif;
          transform: scale(0.9);width: calc(100% / 0.9);transform-origin: top left;}
@@ -42,6 +45,15 @@
     .groupD{background:radial-gradient(1000px 400px at 50% -80px,rgba(85,214,136,.22),rgba(0,0,0,0)),linear-gradient(180deg,#101a14,#0d1511)}
     .groupD .badge{background:linear-gradient(180deg,#63d68b,#126937);}
 
+    /* 追加：チームA/B用の紫テーマ */
+    .groupPurple{
+      background:radial-gradient(1000px 400px at 50% -80px,rgba(197,143,255,.26),rgba(0,0,0,0)),
+                 linear-gradient(180deg,#181326,#100c18);
+    }
+    .groupPurple .badge{
+      background:linear-gradient(180deg,#cf8dff,#5b26a8);
+    }
+
     .participants{display:grid;grid-template-columns:repeat(2,1fr);gap:16px}
     @media(min-width:1100px){.participants{grid-template-columns:repeat(4,1fr)}}
 
@@ -63,6 +75,8 @@
     .rB{background:linear-gradient(180deg,#468cff,#0a2d77)}
     .rC{background:linear-gradient(180deg,#ffd767,#8a6a14);color:var(--white)}
     .rD{background:linear-gradient(180deg,#4cd680,#0f4e2a)}
+    /* 追加：チームA/B用の紫リボン */
+    .rPurple{background:linear-gradient(180deg,#c27bff,#4b1c96);}
   </style>
 </head>
 <body>
@@ -70,7 +84,8 @@
     <div class="groups" id="groups"></div>
   </div>
 
-  <script id="roster" type="application/json">{
+  <script id="roster" type="application/json">
+{
   "groups": [
     {
       "title": "予選Aグループ",
@@ -82,17 +97,21 @@
           "deck": "ライダー（ドラメ）",
           "portrait": "characters/salome.png",
           "cards": [
-            { "src": "cards/salome-card.png", "url": "https://www.db.yugioh-card.com/yugiohdb/member_deck.action?ope=1&wname=MemberDeck&ytkn=ab7459a3476b861122636d696c30934ed3c7ca43cf20777282b69846ccb9e384&cgid=157b17c82f976d8416bea8d4b8debd0a&dno=219&request_locale=ja" },
-            { "src": "cards/none.png", "url": "https://www.google.com/" }
+            {
+              "src": "cards/salome-card.png",
+              "url": "https://www.db.yugioh-card.com/yugiohdb/member_deck.action?ope=1&wname=MemberDeck&ytkn=ab7459a3476b861122636d696c30934ed3c7ca43cf20777282b69846ccb9e384&cgid=157b17c82f976d8416bea8d4b8debd0a&dno=219&request_locale=ja"
+            }
           ]
         },
         {
           "name": "山神カルタ",
-          "deck": "P.U.N.K",
+          "deck": "P.U.N.K.",
           "portrait": "characters/karuta.png",
           "cards": [
-            { "src": "cards/karuta-card.png", "url": "https://www.db.yugioh-card.com/yugiohdb/member_deck.action?ope=1&wname=MemberDeck&ytkn=ab7459a3476b861122636d696c30934ed3c7ca43cf20777282b69846ccb9e384&cgid=157b17c82f976d8416bea8d4b8debd0a&dno=227&request_locale=ja" },
-            { "src": "cards/none.png", "url": "https://www.google.com/" }
+            {
+              "src": "cards/karuta-card.png",
+              "url": "https://www.db.yugioh-card.com/yugiohdb/member_deck.action?ope=1&wname=MemberDeck&ytkn=ab7459a3476b861122636d696c30934ed3c7ca43cf20777282b69846ccb9e384&cgid=157b17c82f976d8416bea8d4b8debd0a&dno=227&request_locale=ja"
+            }
           ]
         },
         {
@@ -100,8 +119,10 @@
           "deck": "エクソシスター",
           "portrait": "characters/hoshikawa.png",
           "cards": [
-            { "src": "cards/hoshikawa-card.png", "url": "https://www.db.yugioh-card.com/yugiohdb/member_deck.action?ope=1&wname=MemberDeck&ytkn=ab7459a3476b861122636d696c30934ed3c7ca43cf20777282b69846ccb9e384&cgid=157b17c82f976d8416bea8d4b8debd0a&dno=248&request_locale=ja" },
-            { "src": "cards/none.png", "url": "https://www.google.com/" }
+            {
+              "src": "cards/hoshikawa-card.png",
+              "url": "https://www.db.yugioh-card.com/yugiohdb/member_deck.action?ope=1&wname=MemberDeck&ytkn=ab7459a3476b861122636d696c30934ed3c7ca43cf20777282b69846ccb9e384&cgid=157b17c82f976d8416bea8d4b8debd0a&dno=248&request_locale=ja"
+            }
           ]
         },
         {
@@ -109,8 +130,10 @@
           "deck": "御巫",
           "portrait": "characters/roco.png",
           "cards": [
-            { "src": "cards/roco-card.png", "url": "https://www.db.yugioh-card.com/yugiohdb/member_deck.action?ope=1&wname=MemberDeck&ytkn=ab7459a3476b861122636d696c30934ed3c7ca43cf20777282b69846ccb9e384&cgid=157b17c82f976d8416bea8d4b8debd0a&dno=244&request_locale=ja" },
-            { "src": "cards/none.png", "url": "https://www.google.com/" }
+            {
+              "src": "cards/roco-card.png",
+              "url": "https://www.db.yugioh-card.com/yugiohdb/member_deck.action?ope=1&wname=MemberDeck&ytkn=ab7459a3476b861122636d696c30934ed3c7ca43cf20777282b69846ccb9e384&cgid=157b17c82f976d8416bea8d4b8debd0a&dno=244&request_locale=ja"
+            }
           ]
         }
       ]
@@ -125,8 +148,14 @@
           "deck": "サイバードラゴン　　　オルフェゴール",
           "portrait": "characters/air.png",
           "cards": [
-            { "src": "cards/air-card.png", "url": "https://www.db.yugioh-card.com/yugiohdb/member_deck.action?ope=1&wname=MemberDeck&ytkn=ab7459a3476b861122636d696c30934ed3c7ca43cf20777282b69846ccb9e384&cgid=157b17c82f976d8416bea8d4b8debd0a&dno=239&request_locale=ja" },
-            { "src": "cards/air-card2.png", "url": "https://www.db.yugioh-card.com/yugiohdb/member_deck.action?ope=1&wname=MemberDeck&ytkn=ab7459a3476b861122636d696c30934ed3c7ca43cf20777282b69846ccb9e384&cgid=157b17c82f976d8416bea8d4b8debd0a&dno=275&request_locale=ja" }
+            {
+              "src": "cards/air-card.png",
+              "url": "https://www.db.yugioh-card.com/yugiohdb/member_deck.action?ope=1&wname=MemberDeck&ytkn=ab7459a3476b861122636d696c30934ed3c7ca43cf20777282b69846ccb9e384&cgid=157b17c82f976d8416bea8d4b8debd0a&dno=239&request_locale=ja"
+            },
+            {
+              "src": "cards/air-card2.png",
+              "url": "https://www.db.yugioh-card.com/yugiohdb/member_deck.action?ope=1&wname=MemberDeck&ytkn=ab7459a3476b861122636d696c30934ed3c7ca43cf20777282b69846ccb9e384&cgid=157b17c82f976d8416bea8d4b8debd0a&dno=275&request_locale=ja"
+            }
           ]
         },
         {
@@ -134,8 +163,14 @@
           "deck": "魔弾／ユベル",
           "portrait": "characters/mashiro.png",
           "cards": [
-            { "src": "cards/mashiro-card.png", "url": "https://www.db.yugioh-card.com/yugiohdb/member_deck.action?ope=1&wname=MemberDeck&ytkn=ab7459a3476b861122636d696c30934ed3c7ca43cf20777282b69846ccb9e384&cgid=157b17c82f976d8416bea8d4b8debd0a&dno=276&request_locale=ja" },
-            { "src": "cards/mashiro-card2.png", "url": "https://www.db.yugioh-card.com/yugiohdb/member_deck.action?ope=1&wname=MemberDeck&ytkn=ab7459a3476b861122636d696c30934ed3c7ca43cf20777282b69846ccb9e384&cgid=157b17c82f976d8416bea8d4b8debd0a&dno=278&request_locale=ja" }
+            {
+              "src": "cards/mashiro-card.png",
+              "url": "https://www.db.yugioh-card.com/yugiohdb/member_deck.action?ope=1&wname=MemberDeck&ytkn=ab7459a3476b861122636d696c30934ed3c7ca43cf20777282b69846ccb9e384&cgid=157b17c82f976d8416bea8d4b8debd0a&dno=276&request_locale=ja"
+            },
+            {
+              "src": "cards/mashiro-card2.png",
+              "url": "https://www.db.yugioh-card.com/yugiohdb/member_deck.action?ope=1&wname=MemberDeck&ytkn=ab7459a3476b861122636d696c30934ed3c7ca43cf20777282b69846ccb9e384&cgid=157b17c82f976d8416bea8d4b8debd0a&dno=278&request_locale=ja"
+            }
           ]
         },
         {
@@ -143,8 +178,10 @@
           "deck": "光の黄金櫃",
           "portrait": "characters/chaika.png",
           "cards": [
-            { "src": "cards/chaika-card.png", "url": "https://www.db.yugioh-card.com/yugiohdb/member_deck.action?ope=1&wname=MemberDeck&ytkn=ab7459a3476b861122636d696c30934ed3c7ca43cf20777282b69846ccb9e384&cgid=157b17c82f976d8416bea8d4b8debd0a&dno=282&request_locale=ja" },
-            { "src": "cards/none.png", "url": "https://www.google.com/" }
+            {
+              "src": "cards/chaika-card.png",
+              "url": "https://www.db.yugioh-card.com/yugiohdb/member_deck.action?ope=1&wname=MemberDeck&ytkn=ab7459a3476b861122636d696c30934ed3c7ca43cf20777282b69846ccb9e384&cgid=157b17c82f976d8416bea8d4b8debd0a&dno=282&request_locale=ja"
+            }
           ]
         },
         {
@@ -152,8 +189,14 @@
           "deck": "ライトロード／月光",
           "portrait": "characters/yashiro.png",
           "cards": [
-            { "src": "cards/yashiro-card.png", "url": "https://www.db.yugioh-card.com/yugiohdb/member_deck.action?ope=1&wname=MemberDeck&ytkn=ab7459a3476b861122636d696c30934ed3c7ca43cf20777282b69846ccb9e384&cgid=157b17c82f976d8416bea8d4b8debd0a&dno=213&request_locale=ja" },
-            { "src": "cards/yashiro-card2.png", "url": "https://www.db.yugioh-card.com/yugiohdb/member_deck.action?ope=1&wname=MemberDeck&ytkn=ab7459a3476b861122636d696c30934ed3c7ca43cf20777282b69846ccb9e384&cgid=157b17c82f976d8416bea8d4b8debd0a&dno=214&request_locale=ja" }
+            {
+              "src": "cards/yashiro-card.png",
+              "url": "https://www.db.yugioh-card.com/yugiohdb/member_deck.action?ope=1&wname=MemberDeck&ytkn=ab7459a3476b861122636d696c30934ed3c7ca43cf20777282b69846ccb9e384&cgid=157b17c82f976d8416bea8d4b8debd0a&dno=213&request_locale=ja"
+            },
+            {
+              "src": "cards/yashiro-card2.png",
+              "url": "https://www.db.yugioh-card.com/yugiohdb/member_deck.action?ope=1&wname=MemberDeck&ytkn=ab7459a3476b861122636d696c30934ed3c7ca43cf20777282b69846ccb9e384&cgid=157b17c82f976d8416bea8d4b8debd0a&dno=214&request_locale=ja"
+            }
           ]
         }
       ]
@@ -168,8 +211,14 @@
           "deck": "マナドゥム",
           "portrait": "characters/ibrahim.png",
           "cards": [
-            { "src": "cards/ibrahim-card.png", "url": "https://www.db.yugioh-card.com/yugiohdb/member_deck.action?ope=1&wname=MemberDeck&ytkn=640c74dfc1354c673bc4110dfdceadadc50d37e1c2345582bc62e314333bf9a6&cgid=157b17c82f976d8416bea8d4b8debd0a&dno=254&request_locale=ja" },
-            { "src": "cards/ibrahim-card.png", "url": "https://www.db.yugioh-card.com/yugiohdb/member_deck.action?ope=1&wname=MemberDeck&ytkn=640c74dfc1354c673bc4110dfdceadadc50d37e1c2345582bc62e314333bf9a6&cgid=157b17c82f976d8416bea8d4b8debd0a&dno=255&request_locale=ja" }
+            {
+              "src": "cards/ibrahim-card.png",
+              "url": "https://www.db.yugioh-card.com/yugiohdb/member_deck.action?ope=1&wname=MemberDeck&ytkn=640c74dfc1354c673bc4110dfdceadadc50d37e1c2345582bc62e314333bf9a6&cgid=157b17c82f976d8416bea8d4b8debd0a&dno=254&request_locale=ja"
+            },
+            {
+              "src": "cards/ibrahim-card.png",
+              "url": "https://www.db.yugioh-card.com/yugiohdb/member_deck.action?ope=1&wname=MemberDeck&ytkn=640c74dfc1354c673bc4110dfdceadadc50d37e1c2345582bc62e314333bf9a6&cgid=157b17c82f976d8416bea8d4b8debd0a&dno=255&request_locale=ja"
+            }
           ]
         },
         {
@@ -177,8 +226,14 @@
           "deck": "マリンセス　粛声",
           "portrait": "characters/toru.png",
           "cards": [
-            { "src": "cards/toru-card.png", "url": "https://www.db.yugioh-card.com/yugiohdb/member_deck.action?ope=1&wname=MemberDeck&ytkn=d503e82645ff0846a6982dd5fac92d6120651a177cddc3d54dde74226fc5dd2d&cgid=157b17c82f976d8416bea8d4b8debd0a&dno=240&request_locale=ja" },
-            { "src": "cards/toru-card2.png", "url": "https://www.db.yugioh-card.com/yugiohdb/member_deck.action?ope=1&wname=MemberDeck&ytkn=d503e82645ff0846a6982dd5fac92d6120651a177cddc3d54dde74226fc5dd2d&cgid=157b17c82f976d8416bea8d4b8debd0a&dno=279&request_locale=ja" }
+            {
+              "src": "cards/toru-card.png",
+              "url": "https://www.db.yugioh-card.com/yugiohdb/member_deck.action?ope=1&wname=MemberDeck&ytkn=d503e82645ff0846a6982dd5fac92d6120651a177cddc3d54dde74226fc5dd2d&cgid=157b17c82f976d8416bea8d4b8debd0a&dno=240&request_locale=ja"
+            },
+            {
+              "src": "cards/toru-card2.png",
+              "url": "https://www.db.yugioh-card.com/yugiohdb/member_deck.action?ope=1&wname=MemberDeck&ytkn=d503e82645ff0846a6982dd5fac92d6120651a177cddc3d54dde74226fc5dd2d&cgid=157b17c82f976d8416bea8d4b8debd0a&dno=279&request_locale=ja"
+            }
           ]
         },
         {
@@ -186,8 +241,10 @@
           "deck": "キマイラ",
           "portrait": "characters/kuzuha.png",
           "cards": [
-            { "src": "cards/kuzuha-card.png", "url": "https://www.db.yugioh-card.com/yugiohdb/member_deck.action?ope=1&wname=MemberDeck&ytkn=d503e82645ff0846a6982dd5fac92d6120651a177cddc3d54dde74226fc5dd2d&cgid=157b17c82f976d8416bea8d4b8debd0a&dno=281&request_locale=ja" },
-            { "src": "cards/none.png", "url": "https://www.google.com/" }
+            {
+              "src": "cards/kuzuha-card.png",
+              "url": "https://www.db.yugioh-card.com/yugiohdb/member_deck.action?ope=1&wname=MemberDeck&ytkn=d503e82645ff0846a6982dd5fac92d6120651a177cddc3d54dde74226fc5dd2d&cgid=157b17c82f976d8416bea8d4b8debd0a&dno=281&request_locale=ja"
+            }
           ]
         },
         {
@@ -195,8 +252,10 @@
           "deck": "ブラック・マジシャン",
           "portrait": "characters/rena.png",
           "cards": [
-            { "src": "cards/rena-card.png", "url": "https://www.db.yugioh-card.com/yugiohdb/member_deck.action?ope=1&wname=MemberDeck&ytkn=d503e82645ff0846a6982dd5fac92d6120651a177cddc3d54dde74226fc5dd2d&cgid=157b17c82f976d8416bea8d4b8debd0a&dno=238&request_locale=ja" },
-            { "src": "cards/none.png", "url": "https://www.google.com/" }
+            {
+              "src": "cards/rena-card.png",
+              "url": "https://www.db.yugioh-card.com/yugiohdb/member_deck.action?ope=1&wname=MemberDeck&ytkn=d503e82645ff0846a6982dd5fac92d6120651a177cddc3d54dde74226fc5dd2d&cgid=157b17c82f976d8416bea8d4b8debd0a&dno=238&request_locale=ja"
+            }
           ]
         }
       ]
@@ -211,8 +270,14 @@
           "deck": "閃刀姫　オノマトホープ",
           "portrait": "characters/kagami.png",
           "cards": [
-            { "src": "cards/kagami-card.png", "url": "https://www.db.yugioh-card.com/yugiohdb/member_deck.action?ope=1&wname=MemberDeck&ytkn=d503e82645ff0846a6982dd5fac92d6120651a177cddc3d54dde74226fc5dd2d&cgid=157b17c82f976d8416bea8d4b8debd0a&dno=265&request_locale=ja" },
-            { "src": "cards/kagami-card2.png", "url": "https://www.db.yugioh-card.com/yugiohdb/member_deck.action?ope=1&wname=MemberDeck&ytkn=d503e82645ff0846a6982dd5fac92d6120651a177cddc3d54dde74226fc5dd2d&cgid=157b17c82f976d8416bea8d4b8debd0a&dno=266&request_locale=ja" }
+            {
+              "src": "cards/kagami-card.png",
+              "url": "https://www.db.yugioh-card.com/yugiohdb/member_deck.action?ope=1&wname=MemberDeck&ytkn=d503e82645ff0846a6982dd5fac92d6120651a177cddc3d54dde74226fc5dd2d&cgid=157b17c82f976d8416bea8d4b8debd0a&dno=265&request_locale=ja"
+            },
+            {
+              "src": "cards/kagami-card2.png",
+              "url": "https://www.db.yugioh-card.com/yugiohdb/member_deck.action?ope=1&wname=MemberDeck&ytkn=d503e82645ff0846a6982dd5fac92d6120651a177cddc3d54dde74226fc5dd2d&cgid=157b17c82f976d8416bea8d4b8debd0a&dno=266&request_locale=ja"
+            }
           ]
         },
         {
@@ -220,8 +285,14 @@
           "deck": "VS　巳剣",
           "portrait": "characters/oliver.png",
           "cards": [
-            { "src": "cards/oliver-card.png", "url": "https://www.db.yugioh-card.com/yugiohdb/member_deck.action?ope=1&wname=MemberDeck&ytkn=d503e82645ff0846a6982dd5fac92d6120651a177cddc3d54dde74226fc5dd2d&cgid=157b17c82f976d8416bea8d4b8debd0a&dno=257&request_locale=ja" },
-            { "src": "cards/oliver-card2.png", "url": "https://www.db.yugioh-card.com/yugiohdb/member_deck.action?ope=1&wname=MemberDeck&ytkn=d503e82645ff0846a6982dd5fac92d6120651a177cddc3d54dde74226fc5dd2d&cgid=157b17c82f976d8416bea8d4b8debd0a&dno=258&request_locale=ja" }
+            {
+              "src": "cards/oliver-card.png",
+              "url": "https://www.db.yugioh-card.com/yugiohdb/member_deck.action?ope=1&wname=MemberDeck&ytkn=d503e82645ff0846a6982dd5fac92d6120651a177cddc3d54dde74226fc5dd2d&cgid=157b17c82f976d8416bea8d4b8debd0a&dno=257&request_locale=ja"
+            },
+            {
+              "src": "cards/oliver-card2.png",
+              "url": "https://www.db.yugioh-card.com/yugiohdb/member_deck.action?ope=1&wname=MemberDeck&ytkn=d503e82645ff0846a6982dd5fac92d6120651a177cddc3d54dde74226fc5dd2d&cgid=157b17c82f976d8416bea8d4b8debd0a&dno=258&request_locale=ja"
+            }
           ]
         },
         {
@@ -229,8 +300,10 @@
           "deck": "レッド・デーモンズ",
           "portrait": "characters/fumi.png",
           "cards": [
-            { "src": "cards/fumi-card.png", "url": "https://www.db.yugioh-card.com/yugiohdb/member_deck.action?ope=1&wname=MemberDeck&ytkn=d503e82645ff0846a6982dd5fac92d6120651a177cddc3d54dde74226fc5dd2d&cgid=157b17c82f976d8416bea8d4b8debd0a&dno=220&request_locale=ja" },
-            { "src": "cards/none.png", "url": "https://www.google.com/" }
+            {
+              "src": "cards/fumi-card.png",
+              "url": "https://www.db.yugioh-card.com/yugiohdb/member_deck.action?ope=1&wname=MemberDeck&ytkn=d503e82645ff0846a6982dd5fac92d6120651a177cddc3d54dde74226fc5dd2d&cgid=157b17c82f976d8416bea8d4b8debd0a&dno=220&request_locale=ja"
+            }
           ]
         },
         {
@@ -238,14 +311,134 @@
           "deck": "HERO　デーモンの召喚",
           "portrait": "characters/kokoro.png",
           "cards": [
-            { "src": "cards/kokoro-card.png", "url": "https://www.db.yugioh-card.com/yugiohdb/member_deck.action?ope=1&wname=MemberDeck&ytkn=d503e82645ff0846a6982dd5fac92d6120651a177cddc3d54dde74226fc5dd2d&cgid=157b17c82f976d8416bea8d4b8debd0a&dno=216&request_locale=ja" },
-            { "src": "cards/kokoro-card2.png", "url": "https://www.db.yugioh-card.com/yugiohdb/member_deck.action?ope=1&wname=MemberDeck&ytkn=d503e82645ff0846a6982dd5fac92d6120651a177cddc3d54dde74226fc5dd2d&cgid=157b17c82f976d8416bea8d4b8debd0a&dno=253&request_locale=ja" }
+            {
+              "src": "cards/kokoro-card.png",
+              "url": "https://www.db.yugioh-card.com/yugiohdb/member_deck.action?ope=1&wname=MemberDeck&ytkn=d503e82645ff0846a6982dd5fac92d6120651a177cddc3d54dde74226fc5dd2d&cgid=157b17c82f976d8416bea8d4b8debd0a&dno=216&request_locale=ja"
+            },
+            {
+              "src": "cards/kokoro-card2.png",
+              "url": "https://www.db.yugioh-card.com/yugiohdb/member_deck.action?ope=1&wname=MemberDeck&ytkn=d503e82645ff0846a6982dd5fac92d6120651a177cddc3d54dde74226fc5dd2d&cgid=157b17c82f976d8416bea8d4b8debd0a&dno=253&request_locale=ja"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "星巡り杯チームA",
+      "class": "groupPurple",
+      "ribbonClass": "rPurple",
+      "entries": [
+        {
+          "name": "獅子堂あかり",
+          "deck": "装備　ダムド",
+          "portrait": "characters/akari.png",
+          "cards": [
+            {
+              "src": "cards/akari-card.png",
+              "url": "https://www.db.yugioh-card.com/yugiohdb/member_deck.action?ope=1&wname=MemberDeck&ytkn=43dea4d19d96f1ab949f92dd1c524bf9efe33d63c4c4875b778211d14f188233&cgid=157b17c82f976d8416bea8d4b8debd0a&dno=283&request_locale=ja"
+            },
+            {
+              "src": "cards/akari-card2.png",
+              "url": "https://www.db.yugioh-card.com/yugiohdb/member_deck.action?ope=1&wname=MemberDeck&ytkn=43dea4d19d96f1ab949f92dd1c524bf9efe33d63c4c4875b778211d14f188233&cgid=157b17c82f976d8416bea8d4b8debd0a&dno=272&request_locale=ja"
+            }
+          ]
+        },
+        {
+          "name": "栞葉るり",
+          "deck": "レスキューラビット",
+          "portrait": "characters/ruri.png",
+          "cards": [
+            {
+              "src": "cards/ruri-card.png",
+              "url": "https://www.db.yugioh-card.com/yugiohdb/member_deck.action?ope=1&wname=MemberDeck&ytkn=43dea4d19d96f1ab949f92dd1c524bf9efe33d63c4c4875b778211d14f188233&cgid=157b17c82f976d8416bea8d4b8debd0a&dno=264&request_locale=ja"
+            }
+          ]
+        },
+        {
+          "name": "梢桃音",
+          "deck": "装備　ダムド",
+          "portrait": "characters/mone.png",
+          "cards": [
+            {
+              "src": "cards/mone-card.png",
+              "url": "https://www.db.yugioh-card.com/yugiohdb/member_deck.action?ope=1&wname=MemberDeck&ytkn=43dea4d19d96f1ab949f92dd1c524bf9efe33d63c4c4875b778211d14f188233&cgid=157b17c82f976d8416bea8d4b8debd0a&dno=270&request_locale=ja"
+            },
+            {
+              "src": "cards/mone-card2.png",
+              "url": "https://www.db.yugioh-card.com/yugiohdb/member_deck.action?ope=1&wname=MemberDeck&ytkn=43dea4d19d96f1ab949f92dd1c524bf9efe33d63c4c4875b778211d14f188233&cgid=157b17c82f976d8416bea8d4b8debd0a&dno=269&request_locale=ja"
+            }
+          ]
+        },
+        {
+          "name": "七瀬すず菜",
+          "deck": "レスキューラビット",
+          "portrait": "characters/suzuna.png",
+          "cards": [
+            {
+              "src": "cards/suzuna-card.png",
+              "url": "https://www.db.yugioh-card.com/yugiohdb/member_deck.action?ope=1&wname=MemberDeck&ytkn=43dea4d19d96f1ab949f92dd1c524bf9efe33d63c4c4875b778211d14f188233&cgid=157b17c82f976d8416bea8d4b8debd0a&dno=286&request_locale=ja"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "星巡り杯チームB",
+      "class": "groupPurple",
+      "ribbonClass": "rPurple",
+      "entries": [
+        {
+          "name": "ソフィア・ヴァレンタイン",
+          "deck": "カオス　ガジェット",
+          "portrait": "characters/sophia.png",
+          "cards": [
+            {
+              "src": "cards/sophia-card.png",
+              "url": "https://www.db.yugioh-card.com/yugiohdb/member_deck.action?ope=1&wname=MemberDeck&ytkn=43dea4d19d96f1ab949f92dd1c524bf9efe33d63c4c4875b778211d14f188233&cgid=157b17c82f976d8416bea8d4b8debd0a&dno=259&request_locale=ja"
+            },
+            {
+              "src": "cards/sophia-card2.png",
+              "url": "https://www.db.yugioh-card.com/yugiohdb/member_deck.action?ope=1&wname=MemberDeck&ytkn=43dea4d19d96f1ab949f92dd1c524bf9efe33d63c4c4875b778211d14f188233&cgid=157b17c82f976d8416bea8d4b8debd0a&dno=260&request_locale=ja"
+            }
+          ]
+        },
+        {
+          "name": "立伝都々",
+          "deck": "カオス",
+          "portrait": "characters/toto.png",
+          "cards": [
+            {
+              "src": "cards/toto-card.png",
+              "url": "https://www.db.yugioh-card.com/yugiohdb/member_deck.action?ope=1&wname=MemberDeck&ytkn=43dea4d19d96f1ab949f92dd1c524bf9efe33d63c4c4875b778211d14f188233&cgid=157b17c82f976d8416bea8d4b8debd0a&dno=262&request_locale=ja"
+            }
+          ]
+        },
+        {
+          "name": "珠乃井ナナ",
+          "deck": "リバース",
+          "portrait": "characters/nana.png",
+          "cards": [
+            {
+              "src": "cards/nana-card.png",
+              "url": "https://www.db.yugioh-card.com/yugiohdb/member_deck.action?ope=1&wname=MemberDeck&ytkn=43dea4d19d96f1ab949f92dd1c524bf9efe33d63c4c4875b778211d14f188233&cgid=157b17c82f976d8416bea8d4b8debd0a&dno=290&request_locale=ja"
+            }
+          ]
+        },
+        {
+          "name": "早乙女ベリー",
+          "deck": "カオス",
+          "portrait": "characters/berry.png",
+          "cards": [
+            {
+              "src": "cards/berry-card.png",
+              "url": "https://www.db.yugioh-card.com/yugiohdb/member_deck.action?ope=1&wname=MemberDeck&ytkn=43dea4d19d96f1ab949f92dd1c524bf9efe33d63c4c4875b778211d14f188233&cgid=157b17c82f976d8416bea8d4b8debd0a&dno=256&request_locale=ja"
+            }
           ]
         }
       ]
     }
   ]
-  }
+}
   </script>
 
   <script>
